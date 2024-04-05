@@ -1,8 +1,10 @@
-def test(a, b):
+def test():
+    a = 15
+    b = 'Urban'
     print(a, b)
 
 
-test(12, True)
+test()
 
 
 def test2(a, b, c):
