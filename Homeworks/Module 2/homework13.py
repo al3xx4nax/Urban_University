@@ -10,8 +10,8 @@ print_params(a=1, b=25, c=True)
 print_params(a=1, b='строка', c=[1,2,3])
 
 #2
-values_list = [1, 'строка', True]
-values_dict = {'a': 1, 'b': 'строка', 'c': True}
+values_list = [False, 13, 'string']
+values_dict = {'a': 'Urban', 'b': False, 'c': 45}
 print_params(*values_list)
 print_params(**values_dict)
 
