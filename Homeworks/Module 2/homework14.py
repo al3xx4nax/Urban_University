@@ -1,8 +1,8 @@
-def test(a=25, b=False, c='Urban'):
-    print(a, b, c)
+def test(*params):
+    print(params)
 
 
-test()
+test(33, 'Urban', False, 55)
 
 
 def factorial(n):
