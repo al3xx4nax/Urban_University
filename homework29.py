@@ -2,7 +2,7 @@ class AgeError(Exception):
     pass
 
 
-class MaleError(Exception):
+class GenderError(Exception):
     pass
 
 
@@ -10,14 +10,14 @@ class SmallAgeError(Exception):
     pass
 
 
-def person(age, password):
+def person(age, gender):
     if not isinstance(age, int) or age <= 0 or age > 100:
         raise AgeError('Неверно введён возраст!', 'Введите целое число от 1 до 100')
     if age < 18:
         raise SmallAgeError('Вы еще не достигли избирательного возраста!')
-    if password != 'мужчина' and password != 'женщина':
-        raise MaleError('Неверно указан пол!', 'Введите свой пол по примеру: "мужчина" или "женщина"')
-    print(f' \tИзбиратель: \nВозраст: {age} \nПол: {password}')
+    if gender != 'мужчина' and gender != 'женщина':
+        raise GenderError('Неверно указан пол!', 'Введите свой пол по примеру: "мужчина" или "женщина"')
+    print(f' \tИзбиратель: \nВозраст: {age} \nПол: {gender}')
 
 
 try:
@@ -28,6 +28,6 @@ except AgeError as a:
 except SmallAgeError as b:
     print(b)
     raise
-except MaleError as c:
+except GenderError as c:
     print(c)
     raise
